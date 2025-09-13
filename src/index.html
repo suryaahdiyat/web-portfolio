@@ -4,12 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
-  <body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="p-6 max-w-sm bg-white rounded-xl shadow-lg">
+  <body class="bg-neutral-800 poppins-regula">
+    <!-- <div class="p-6 max-w-sm bg-white rounded-xl shadow-lg">
       <h1 class="text-2xl font-bold text-gray-800">Hello Tailwind!</h1>
       <p class="mt-2 text-gray-600">Ini pakai output.css 🚀</p>
+    </div> -->
+
+    <!-- Header -->
+    <div class="flex justify-center my-5">
+      <div class="flex justify-around w-2/3 text-slate-100 text-xs">
+        <a href="#aboutme" class="hover:underline duration-150">About Me</a>
+        <a href="#" class="hover:underline duration-150">Portofolio</a>
+        <a href="#" class="hover:underline duration-150">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="justify-center items-center min-h-50 mx-5 flex">
+      <div>
+        <div class="text-slate-100 text-xs mb-1">
+          <span class="text-xl"
+            >I’m <span class="text-yellow-600 poppins-bold">Surya</span></span
+          >
+          <br />Web Developer | Problem Solver | Lifelong Learner.
+        </div>
+        <a
+          href="#contactme"
+          class="border border-yellow-600 bg-transparent text-yellow-600 poppins-semibold text-xs px-[5px] py-[3px]"
+          >Contact Me</a
+        >
+      </div>
+      <div>
+        <div class="relative">
+          <img src="/src/img/Surya_Ahdiyat.png" alt="" class="w-50 h-50" />
+          <div class="absolute right-0 bottom-0 h-10 w-1 bg-yellow-600"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about me -->
+    <div id="aboutme" class="p-5 bg-neutral-900">
+      <div>
+        <span class="text-xl text-slate-100"
+          >About <span class="text-yellow-600 poppins-bold">Me</span></span
+        >
+      </div>
+      <div class="flex justify-between items-start gap-2">
+        <div class="w-20 h-1 bg-yellow-600"></div>
+        <div class="text-[8px] text-slate-100 text-justify">
+          Halo, saya Surya Ahdiyat. Saya memiliki latar belakang di bidang
+          Teknik Informatika dan fokus pada pengembangan aplikasi berbasis web.
+          Saya terbiasa bekerja dengan teknologi seperti PHP, Laravel,
+          TailwindCSS, dan juga tertarik mendalami data serta analisis. Saya
+          senang memecahkan masalah, berkolaborasi dalam tim, serta terus
+          belajar teknologi baru untuk berkembang sebagai seorang developer.
+        </div>
+      </div>
     </div>
   </body>
 </html>
