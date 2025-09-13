@@ -21,42 +21,45 @@
     <!-- Header -->
     <div class="flex justify-center my-5">
       <div class="flex justify-around w-2/3 text-slate-100 text-xs">
-        <a href="#aboutme" class="hover:underline duration-150">About Me</a>
+        <a href="#about" class="hover:underline duration-150">About</a>
         <a href="#" class="hover:underline duration-150">Portofolio</a>
-        <a href="#" class="hover:underline duration-150">Contact Me</a>
+        <a href="#" class="hover:underline duration-150">Contact</a>
       </div>
     </div>
 
     <!-- Hero Section -->
-    <div class="justify-center items-center min-h-50 mx-5 flex">
-      <div>
-        <div class="text-slate-100 text-xs mb-1">
+    <div class="justify-center relative items-end min-h-96 mx-5 flex flex-col">
+      <div class="absolute left-0">
+        <div class="text-slate-100 text-xs mb-1 w-3/4">
           <span class="text-xl"
-            >I’m
-            <span class="text-yellow-600 poppins-bold">Surya 12345</span></span
+            >I’m <span class="text-yellow-600 poppins-bold">Surya</span></span
           >
-          <br />Web Developer | Problem Solver | Lifelong Learner.
+          <br />
+          <span class="text-[12px]"
+            >Web Developer | Problem Solver | Lifelong Learner.</span
+          >
         </div>
         <a
-          href="#contactme"
-          class="border border-yellow-600 bg-transparent text-yellow-600 poppins-semibold text-xs px-[5px] py-[3px]"
-          >Contact Me</a
+          href="#contact"
+          class="border border-yellow-600 bg-transparent text-yellow-600 poppins-semibold text-[8px] px-[5px] py-[3px]"
+          >Contact</a
         >
       </div>
       <div>
-        <div class="relative">
-          <img src="img/Surya_Ahdiyat.png" alt="" class="w-50 h-50" />
+        <div class="">
+          <!-- <div src="img/Surya_Ahdiyat.png" alt="" class="w-64 h-auto" /> -->
+          <div
+            class="w-64 h-96 mask-b-from-20% mask-b-to-80% bg-[url(img/Surya_Ahdiyat.png)]"
+          ></div>
           <div class="absolute right-0 bottom-0 h-10 w-1 bg-yellow-600"></div>
         </div>
       </div>
     </div>
 
     <!-- about me -->
-    <div id="aboutme" class="p-5 bg-neutral-900">
+    <div id="about" class="p-5 bg-neutral-900">
       <div>
-        <span class="text-xl text-slate-100"
-          >About <span class="text-yellow-600 poppins-bold">Me</span></span
-        >
+        <span class="text-xl text-slate-100">About</span>
       </div>
       <div class="flex justify-between items-start gap-2">
         <div class="w-20 h-1 bg-yellow-600"></div>
