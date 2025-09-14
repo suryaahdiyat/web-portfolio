@@ -282,17 +282,17 @@
         <!-- Kontainer -->
         <div
           id="scrollContainer"
-          class="flex overflow-hidden scroll-smooth text-white"
+          class="flex overflow-hidden scroll-smooth text-slate-100"
         >
           <a
             href="https://github.com/suryaahdiyat/Belajar-Data-Analis"
-            class="w-72 h-52 shrink-0 rounded flex items-center justify-center border border-white relative"
+            class="w-72 h-52 shrink-0 rounded flex items-center justify-center relative"
           >
-            <div>
+            <div class="">
               <div
                 class="bg-contain bg-center bg-no-repeat w-72 h-52 bg-[url(assets/projects/project_1.jpg)]"
               ></div>
-              <div class="absolute h-16 w-72 bg-black/50 top-3/4 -left-0">
+              <div class="absolute h-10 w-72 bg-black/50 top-3/4 -left-0">
                 <div class="p-2 text-xs">
                   Belajar Data Analyst menggunakan Python
                 </div>
@@ -301,9 +301,9 @@
           </a>
           <a
             href="https://github.com/suryaahdiyat/myarticle"
-            class="w-72 h-52 shrink-0 rounded flex items-center justify-center border border-white relative"
+            class="w-72 h-52 shrink-0 rounded flex items-center justify-center relative"
           >
-            <div>
+            <div class="p-2">
               <div
                 class="bg-contain bg-center bg-no-repeat w-72 h-52 bg-[url(assets/projects/project_2.png)]"
               ></div>
@@ -314,7 +314,7 @@
           </a>
           <a
             href="https://github.com/suryaahdiyat/project-ta"
-            class="w-72 h-52 shrink-0 rounded flex items-center justify-center border border-white relative"
+            class="w-72 h-52 shrink-0 rounded flex items-center justify-center relative"
           >
             <div>
               <div
@@ -327,7 +327,7 @@
           </a>
           <a
             href="https://github.com/suryaahdiyat/perpus-batola"
-            class="w-72 h-52 shrink-0 rounded flex items-center justify-center border border-white relative"
+            class="w-72 h-52 shrink-0 rounded flex items-center justify-center relative"
           >
             <div>
               <div
@@ -350,7 +350,7 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       const container = document.getElementById("scrollContainer");
       const itemWidth = container.querySelector("div").offsetWidth; // ambil lebar card
       let scrollPosition = 0;
@@ -365,6 +365,32 @@
           scrollPosition + itemWidth,
           container.scrollWidth - container.clientWidth
         );
+        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+      });
+    </script> -->
+    <script>
+      const container = document.getElementById("scrollContainer");
+      const itemWidth = container.querySelector("a").offsetWidth; // ambil lebar card (pakai <a>)
+      const totalItems = container.querySelectorAll("a").length; // hitung jumlah item
+      let scrollPosition = 0;
+
+      document.getElementById("left").addEventListener("click", () => {
+        if (scrollPosition <= 0) {
+          // kalau di awal → lompat ke akhir
+          scrollPosition = (totalItems - 1) * itemWidth;
+        } else {
+          scrollPosition -= itemWidth;
+        }
+        container.scrollTo({ left: scrollPosition, behavior: "smooth" });
+      });
+
+      document.getElementById("right").addEventListener("click", () => {
+        if (scrollPosition >= (totalItems - 1) * itemWidth) {
+          // kalau di akhir → balik ke awal
+          scrollPosition = 0;
+        } else {
+          scrollPosition += itemWidth;
+        }
         container.scrollTo({ left: scrollPosition, behavior: "smooth" });
       });
     </script>
